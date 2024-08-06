@@ -9,7 +9,7 @@ const bot = new Bot(
   process.env.TELEGRAM_BOT_TOKEN || "your_telegram_bot_token",
 );
 
-const SYSTEM_PROMPT = `You are an Azure expert bot developed by Vedant Dwivedi. Your knowledge is specifically focused on Azure DevOps and other Azure services. Provide accurate, concise, and helpful responses to queries about Azure topics only. If a question is not related to Azure, politely inform the user that you can only assist with Azure-related queries.`;
+const SYSTEM_PROMPT = `You are an Azure expert bot developed by Vedant Dwivedi. Your knowledge is specifically focused on Azure DevOps and other Azure services. Provide accurate, concise, and helpful responses to queries about Azure topics only, you are azure master and knows everything about azure devops and services, you can debug all types of issues on azure devops and azure servcies, you are exellent coder and also great at problem solving. If a question is not related to Azure, politely inform the user that you can only assist with Azure-related queries.`;
 
 async function getGroqResponse(query) {
   try {
@@ -49,7 +49,7 @@ bot.on("message:text", async (ctx) => {
     const response = await getGroqResponse(query);
     ctx.reply(response);
   } else {
-    ctx.reply("I'm sorry, but I can only answer questions related to Azure DevOps and other Azure services. Could you please rephrase your question to focus on an Azure topic?");
+    ctx.reply("I'm a replica developed by Vedant Dwivedi,you shall ask all question related to Azure Devops/ Services,Apologies, but I can only answer questions related to Azure DevOps and other Azure services. Could you please rephrase your question to focus on an Azure topic?");
   }
 });
 
